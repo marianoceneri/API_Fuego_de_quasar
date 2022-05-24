@@ -53,7 +53,8 @@ def topsecret():
         )
        
     except ValueError as e:
-        response = app.response_class(response=str(e) ,status=400)
+        respuesta = {'error': str(e)}
+        response = app.response_class(response=json.dumps( respuesta), status=400, mimetype='application/json')
          
     return response
  
@@ -88,7 +89,8 @@ def topsecret_split(satellite_name):
             response = app.response_class(status=200)
 
         except ValueError as e:
-            response = app.response_class(response=str(e), status=400)
+            respuesta = {'error': str(e)}
+            response = app.response_class(response=json.dumps(respuesta), status=400, mimetype='application/json')
 
         return response
     
@@ -113,7 +115,8 @@ def topsecret_split(satellite_name):
             )
 
         except ValueError as e:
-            response = app.response_class(response=str(e), status=400)
+            respuesta = {'error': str(e)}
+            response = app.response_class(response=json.dumps(respuesta), status=400, mimetype='application/json')
 
         return response
 
