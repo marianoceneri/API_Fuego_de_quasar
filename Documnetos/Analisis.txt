@@ -1,0 +1,15 @@
+Para localizar la fuente del mensaje, se empleará una función de trilateración ya que disponemos de las coordenadas de los satélites y las distancias de la fuente con respecto a cada satélite.
+La decodificación del mensaje supone 2 retos, el primer reto es que cada mensaje puede presentar un desfasaje. Para lidiar con esto se optará por igualar la cantidad de elementos de cada mensaje array con elementos vacíos [“”], a la cantidad de elementos del array con más elementos.
+El segundo reto se encuentra en cuando una palabra del mensaje no pueda ser determinada, se reemplaza por un string en blanco en el array. El enfoque te tomaremos aquí será recorrer los tres array de manera inversa preguntando si hay un valor en cada una de las posiciones en cada array, si para una posición (x) no so encuentra valor en ningunos de los tres array y aún quedan elementos con datos en el array indicaremos que no se puede descifrar el mensaje *1; en caso que no se detecte valor para la posición (x)  en ninguno de los tres array y en la posiciones siguientes contengas String vacio, se tomara como elementos de corrección de desfasaje y como final satisfactorio de mensaje *2.
+
+*1 
+Ejemplo de mensaje, que no podrá ser descifrado dato que para el elemento 1 no hay valor en ningunos de los 3 array y aún queda el último elemento con valor.
+Mensaje 1 [“estas”,””,”Hola”]
+Mensaje 2 [“estas”,””,”Hola”]
+Mensaje 3 [“estas”,””,”Hola”]
+
+*2
+Ejemplo de mensaje que permitirá con su combinación descifrar el mensaje y con final satisfactorio, dado que las siguientes posiciones, a partir de la cual no hay valor en ningunos de los tres array, no hay posiciones con valores y se descrinaran por ser elementos agregados para la solución de desfasaje.
+Mensaje 1 [””,“”, “”,””,”Hola”]
+Mensaje 2 [””,“”, “estas”,”como”,”Hola”]
+Mensaje 3 [””,“”,“estas”,””,”Hola”]
