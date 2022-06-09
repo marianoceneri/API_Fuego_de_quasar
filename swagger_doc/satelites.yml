@@ -1,0 +1,76 @@
+Endpoint retorna posición y mesanje secreto
+---
+  post:
+    tags:
+    - TOPSECRET
+    summary: TOPSECRET ENDPOINT
+    operationId: TOPSECRET
+    description: Recibe JSON con datos de los satelites, y devuelve posición y mensaje secreto decodificado.
+    consumes:
+    - application/json
+    produces:
+    - application/json
+    parameters:
+    - in: body
+      name: TOPSECRET
+      description: JSON con datos de los satelites
+      schema:
+        $ref: '#/definitions/json_full'
+  responses:
+    200:
+      description: ok
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/respuestaok'
+    404:
+      description: invalid input, object invalid
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/respuestabad'
+  definitions:
+    json_full: 
+      properties:
+        satellites:
+          type: array
+          items:
+            $ref: '#/definitions/json_full_load'
+    json_full_load:
+      properties:
+        items:
+        name:
+          type: string
+          example: "kenobi"
+        distance:
+          type: number
+          format: double
+          example:  100.5
+        message:
+          type: number
+          format: double
+          example:  100.5
+
+    respuestaok:
+      type: object
+      properties:
+        position:
+          $ref: '#/definitions/position'
+        message:
+          type: string
+          example: Este es un mensaje secreto
+    position:
+      properties:
+        X:
+          type: string
+          example: "-225.0"
+        Y:
+          type: string
+          example:  "1125.0"
+          
+    respuestabad:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "El mensaje no puede ser descifrado"

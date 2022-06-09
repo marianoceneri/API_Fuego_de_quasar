@@ -1,0 +1,46 @@
+Endpoint retorna posición y mesanje secreto si cuenta con la información de los 3 satelites
+---
+get:
+  tags:
+  - TOPSECRET SPLIT
+  summary: TOPSECRET ENDPOINT
+  operationId: TOPSECRET_SPLIT
+  description: Devuelve posición y mensaje secreto decodificado si tiene información de los 3 satrelites.
+  produces:
+  - application/json
+responses:
+  200:
+    description: ok
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/respuestaok'
+  404:
+    description: invalid input, object invalid
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/respuestabad'
+definitions:
+  respuestaok:
+    type: object
+    properties:
+      position:
+        $ref: '#/definitions/position'
+      message:
+        type: string
+        example: Este es un mensaje secreto
+  position:
+    properties:
+      X:
+        type: string
+        example: "-225.0"
+      Y:
+        type: string
+        example:  "1125.0"
+  respuestabad:
+    type: object
+    properties:
+      error:
+        type: string
+        example: "Error. Uno de los mensajes esta vacio. - No hay suficiente información para descifrar el mensaje"

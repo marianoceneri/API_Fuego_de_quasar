@@ -1,0 +1,47 @@
+Endpoint carga de datos de satelites individual
+---
+  post:
+    tags:
+    - TOPSECRET SPLIT
+    summary: TOPSECRET ENDPOINT
+    operationId: TOPSECRET_SPLIT
+    description: Recibe JSON con dato un satelite, devuelve posición y mensaje secreto decodificado si tiene información de los 3 satrelites.
+    consumes:
+    - application/json
+    produces:
+    - application/json
+    parameters:
+    - in: body
+      name: TOPSECRET
+      description: JSON con datos de los satelites
+    - in: path
+      name: satellite_name
+      description: Nombre del Satelite
+      required: true
+      type: string
+  responses:
+    200:
+      description: ok
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/respuestaok'
+    404:
+      description: invalid input, object invalid
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/respuestabad'
+  definitions:
+    respuestaok:
+      type: object
+      properties:
+        OK:
+          type: string
+          example: "Satelite cargado"
+    respuestabad:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Error. La estructura de datos json no es valida"
