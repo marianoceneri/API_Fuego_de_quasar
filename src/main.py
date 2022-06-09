@@ -50,7 +50,7 @@ def crea_rutas(app):
 
 
     @app.route('/app/v1/topsecret/', methods=['POST'])
-    @swag_from('swagger_doc/satelites.yml')
+    @swag_from('../swagger_doc/satelites.yml')
     def topsecret():
 
         try:
@@ -88,7 +88,7 @@ def crea_rutas(app):
     
 
     @app.route('/app/v1/topsecret_split/<string:satellite_name>', methods=['POST'])
-    @swag_from('swagger_doc/satelites_split.yml')
+    @swag_from('../swagger_doc/satelites_split.yml')
     def topsecret_split_post(satellite_name):
 
         try:
@@ -124,7 +124,7 @@ def crea_rutas(app):
 
 
     @app.route('/app/v1/topsecret_split/', methods=['GET'])
-    @swag_from('swagger_doc/satelites_split_get.yml')
+    @swag_from('../swagger_doc/satelites_split_get.yml')
     def topsecret_split_get():
 
         try:
