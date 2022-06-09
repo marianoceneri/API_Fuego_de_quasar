@@ -1,6 +1,6 @@
 API rest - Operación Fuego de Quasar
 
-Pasos para ejecución 
+## Pasos para ejecución 
 
 ### 1 - Instalar Vitrual ENV
 pip install virtualenv
@@ -26,12 +26,12 @@ pytest tests/test.py -v
 Api accesible a travez de  http://127.0.0.1:8080 
 
 
-Seteos
--------
+## Seteos
+
 En el archivo coordenadas_satelites.json se encuentra el seteo de las coordenadsas de los satelites.
 
-Directorios
-------------
+## Directorios
+
 ./
     - ***requirements.txt*** (Archivo con lista de dependencias del proyecto)
 ./src/
