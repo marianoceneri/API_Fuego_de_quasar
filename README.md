@@ -1,32 +1,32 @@
-### API rest - Operación Fuego de Quasar
+# API rest - Operación Fuego de Quasar
 
-## Pasos para ejecución 
+### Pasos para ejecución 
 
-## 1 - Instalar Vitrual ENV
+### 1 - Instalar Vitrual ENV
 pip install virtualenv
 
-## 2- Crear entonro env 
+### 2- Crear entonro env 
 python -m venv env
 
-## 3 - Acvtivar entorno env (windows)
+### 3 - Acvtivar entorno env (windows)
 ./venv/Script/activate
 
-## 4 - Acvtivar entorno env (mac)
+### 4 - Acvtivar entorno env (mac)
 ./venv/bin/activate
 
-## 5 - Instalar dependencias
+### 5 - Instalar dependencias
 pip install -r requirements.txt
 
-## 6 - Ejecución
+### 6 - Ejecución
 python.exe main.py
 
-## 7- Test Unitarios
+### 7- Test Unitarios
 pytest tests/test.py -v
 
-## Local Api accesible a travez de  http://127.0.0.1:8080
+### Local Api accesible a travez de  http://127.0.0.1:8080
 
-## Heroku Api https://firequasarml.herokuapp.com//app/v1/topsecret/
-## Heroku Api https://firequasarml.herokuapp.com//app/v1/topsecret_split/
+### Heroku Api https://firequasarml.herokuapp.com//app/v1/topsecret/
+### Heroku Api https://firequasarml.herokuapp.com//app/v1/topsecret_split/
 
 ## Swagger 
 URL http://127.0.0.1:8080/apidocs/
