@@ -33,7 +33,7 @@ def crea_rutas(app):
 
 
     #Busco la configuracion de las coordenadas de los satelites
-    with open('src/coordenadas_satelites.json') as f:
+    with open('coordenadas_satelites.json') as f:
         config = json.load(f)
 
         x1=config['coordenadas_kenobi'][0]
