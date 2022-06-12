@@ -25,8 +25,12 @@ pytest tests/test.py -v
 
 ### Local Api accesible a travez de  http://127.0.0.1:8080
 
-### Heroku Api https://firequasarml.herokuapp.com//app/v1/topsecret/
-### Heroku Api https://firequasarml.herokuapp.com//app/v1/topsecret_split/
+### Heroku Swagger 
+https://mlquasarfire.herokuapp.com/apidocs//app/v1/topsecret/
+
+### Heroku Api 
+https://mlquasarfire.herokuapp.com/app/v1/topsecret/
+
 
 ## Swagger 
 URL http://127.0.0.1:8080/apidocs/
@@ -39,7 +43,7 @@ URL http://127.0.0.1:8080/apidocs/
 ## Directorios
     .
     ├── src
-        ├── main.py (Archivos principal del proyecto, API endpoint)
+        ├── rutas.py (endpoint)
         ├── satelites.py (Archivo clase satelites con funciones y logistica)
         └── coordenadas_satelites.json (Archivo con configuracion de los satelites)
     ├── tests
@@ -53,5 +57,6 @@ URL http://127.0.0.1:8080/apidocs/
         ├──  Ejercicio Fuego de Quasar - GO.pdf (Documento con información del desafio)
         └──  Analisis.txt (Documento con el analisis del proyecto.)
     ├── env
-    ├── requirements.txt (Archivo con lista de dependencias del proyecto
+    ├── requirements.txt (Archivo con lista de dependencias del proyecto)
+    ├── app.py 
     └── README.md
