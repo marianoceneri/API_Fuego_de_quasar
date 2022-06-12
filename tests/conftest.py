@@ -1,6 +1,6 @@
 import pytest
 from flask import Flask
-from src.main import crea_rutas
+from src.rutas import crea_rutas
 
 
 @pytest.fixture()

@@ -1,5 +1,4 @@
 import json
-from flask import Flask
 from flask import request
 from satelites import satelites
 from flasgger import Swagger,swag_from
@@ -154,6 +153,3 @@ def crea_rutas(app):
         app.run(debug=True, port=8080)
 
 
-app = Flask(__name__)
-
-crea_rutas(app)
